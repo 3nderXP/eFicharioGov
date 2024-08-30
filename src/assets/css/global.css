@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Nunito, Arial, Helvetica, sans-serif;
+    color: var(--text-color-1);
+}
+
+:root {
+
+    /* Cores */
+
+    --color-10: #6090ff;
+    --color-30: #9cceff;
+    --color-60: #f1f1f1;
+
+    --text-color-1: #202020;
+
+    /* Medidas */
+
+    --max-width: 1024px;
+    --cylinder-radius: 999999px;
+
+}
+
+body {
+    background-color: var(--color-60);
+}
+
+a {
+    cursor: pointer;
+}
+
+.max-width {
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    font-size: 14pt;
+    font-weight: 600;
+}
+
+#navbar > div {
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    gap: 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#navbar .logo {
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+#navbar .logo span {
+    color: var(--color-10);
+}
+
+#navbar .menus {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+#navbar .menus .menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    text-decoration: none
+}
+
+#navbar .menus .menu.outline a {
+    border: 2px solid var(--color-10);
+    color: var(--color-10);
+    padding: 10px 40px;
+    border-radius: var(--cylinder-radius);
+}
+
+#navbar .menus .menu.highlight a {
+    background-color: var(--color-10);
+    color: #ffffff;
+    padding: 10px 40px;
+    border-radius: var(--cylinder-radius);
+}
