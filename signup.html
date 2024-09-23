@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/signin.css">
+</head>
+<body>
+    <form>
+        <a href="./index.html" class="previous">
+            <i class="icon bx bx-home-alt-2"></i>
+            Início
+        </a>
+        <h1 class="title">Crie sua conta</h1>
+        <p class="description">Crie sua conta e simplifique seus agendamentos agora!</p>
+        <div class="fields">
+            <div class="field">
+                <label>
+                    <i class="icon bx bx-user"></i>
+                    Nome
+                </label>
+                <input type="text" name="name" autocomplete="off" placeholder="" required>
+            </div>
+            <div class="field">
+                <label>
+                    <i class="icon bx bx-envelope"></i>
+                    E-mail
+                </label>
+                <input type="email" name="email" autocomplete="off" placeholder="" required>
+            </div>
+            <div class="fields row">
+                <div class="field">
+                    <label>
+                        <i class="icon bx bx-lock-alt"></i>
+                        Senha
+                    </label>
+                    <input type="password" name="password" autocomplete="off" placeholder="" required>
+                </div>
+                <div class="field">
+                    <label>
+                        <i class="icon bx bx-lock-alt"></i>
+                        Confirme a senha
+                    </label>
+                    <input type="password" name="password" autocomplete="off" placeholder="" required>
+                </div>
+            </div>
+            <div class="field">
+                <input type="submit" value="Entrar" name="submit" required>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Já tem uma conta? <a href="./signin.html">Faça login!</a></p>
+        </div>
+    </form>
+</body>
+</html>

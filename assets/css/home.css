@@ -1,0 +1,310 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+    display: flex;
+    background-color: #ffffff;
+    padding: var(--default-padding);
+    overflow: hidden;
+}
+
+header .width-grid {
+    position: relative;
+}
+
+header .width-grid::after {
+    --size: 1000px;
+    content: '';
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-30);
+    transform: translate3d(50%, -50%, 0);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+header * {
+    z-index: 2;
+}
+
+header .width-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+header .left, header .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+header .left .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header .left .text-content .title {
+    font-size: 36pt;
+}
+
+header .left .text-content .description {
+    font-size: 16pt;
+}
+
+header .right .smartphone {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 300px;
+    padding: 100px var(--default-padding);
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin: 0 auto;
+}
+
+main section > .title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 32pt;
+}
+
+main .benefits .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+main .benefits .wrapper .benefit {
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    transition: .3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 360px;
+}
+
+main .benefits .wrapper .benefit:hover {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .3);
+    background-color: var(--color-10);
+    transform: translateY(-20px);
+    color: #ffffff;
+    z-index: 2;
+}
+
+main .benefits .wrapper .benefit .icon {
+    font-size: 40pt;
+}
+
+main .benefits .wrapper .benefit .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .benefits .wrapper .benefit .content .description {
+    font-size: 14pt;
+    font-weight: 500;
+    color: #5b6770;
+}
+
+main .benefits .wrapper .benefit:hover .content .description {
+    color: currentColor;
+}
+
+main .how-works .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+main .how-works .container .left {
+    position: relative;
+}
+
+main .how-works .container .left::before {
+    --size: 853px;
+    content: '';
+    left: 0;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: var(--color-30);
+    position: absolute;
+}
+
+main .how-works .container .left img {
+    width: 300px;
+    z-index: 2;
+    position: relative;
+}
+
+main .how-works .container .right .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+main .how-works .container .right .cards .card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+main .how-works .container .right .cards .card .icon {
+    font-size: 40pt;
+    color: var(--color-10);
+}
+
+main .how-works .container .right .cards .card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .how-works .container .right .cards .card .content .description {
+    color: #5b6770;
+}
+
+
+main .feedbacks .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+main .feedbacks .wrapper .feedback {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+main .feedbacks .wrapper .feedback:hover {
+    background-color: var(--color-10);
+    color: #ffffff;
+    transform: translateY(-20px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .2);
+    z-index: 2;
+}
+
+main .feedbacks .wrapper .feedback .quote {
+    content: '';
+    position: absolute;
+    font-size: 70pt;
+    color: var(--color-30);
+    top: 20px;
+    right: 20px;
+    opacity: .5;
+}
+
+main .feedbacks .wrapper .feedback .avatar {
+    --size: 100px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main .feedbacks .wrapper .feedback .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .feedbacks .wrapper .feedback .content .tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main .feedbacks .wrapper .feedback .content .tags .tag {
+    background-color: var(--color-30);
+    width: max-content;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: var(--cylinder-radius);
+}
+
+main .feedbacks .wrapper .feedback .content .message {
+    font-size: 14pt;
+    color: #5b6770;
+    transition: .3s ease;
+}
+
+main .feedbacks .wrapper .feedback:hover .content .message {
+    color: #ffffff;
+}
+
+main .contact-us .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+main .contact-us .container form {
+    --f-bg: #ffffff;
+    padding: 40px;
+    border-radius: 60px;
+    position: relative;
+}
+
+main .contact-us .container form::before {
+    --size: 600px;
+    content: '';
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--color-30);
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    transform: translate3d(50%, -50%, 0);
+    z-index: -1;
+}
+
+main .contact-us .container form .title {
+    font-size: 48pt;
+}
+
+main .contact-us .container .illustration {
+    position: relative;
+}
+
+main .contact-us .container .illustration img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}

@@ -1,0 +1,91 @@
+form {
+    --f-bg: var(--color-60);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--f-bg);
+    gap: 20px;
+}
+
+form > .title {
+    font-size: 32pt;
+    color: var(--color-10);
+}
+
+form > .description {
+    font-size: 14pt;
+    color: #5b6770;
+}
+
+form .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+form .fields.row {
+    flex-direction: row;
+}
+
+form .fields .field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 20px;
+}
+
+form .fields .field label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    padding: 0 10px;
+    left: 20px;
+    transform: translateY(-50%);
+    transition: .3s ease;
+    border-radius: var(--cylinder-radius);
+    color: var(--color-10);
+    pointer-events: none;
+    font-weight: bold;
+}
+
+form .fields .field:has(input:focus, input:not(:placeholder-shown)) label {
+    font-size: 10pt;
+    top: 0;
+    background-color: var(--f-bg);
+}
+
+form .fields .field .icon {
+    font-size: 18pt;
+    color: var(--color-10);
+    transition: .3s ease;
+}
+
+form .fields .field:has(input:focus, input:not(:placeholder-shown)) .icon {
+    font-size: 16pt;
+}
+
+form .fields .field :is(input, textarea) {
+    padding: 20px;
+    border-radius: var(--cylinder-radius);
+    border: 1px solid var(--color-30);
+    background: none;
+    width: 100%;
+    font-size: 14pt;
+}
+
+form .fields .field textarea {
+    border-radius: 20px;
+    resize: none;
+    min-height: 200px;
+}
+
+form .fields .field input[type="submit"] {
+    background-color: var(--color-10);
+    color: #ffffff;
+    font-size: 14pt;
+    font-weight: bold;
+    cursor: pointer;
+}

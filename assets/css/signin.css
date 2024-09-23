@@ -1,0 +1,27 @@
+form {
+    --f-bg: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 640px;
+    margin: 100px auto;
+    border-radius: 40px;
+    padding: 40px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, .05);
+    position: relative;
+}
+
+form .previous {
+    position: absolute;
+    bottom: calc(100% + 20px);
+    left: 0;
+}
+
+form > .title {
+    text-align: center;
+}
+
+form > .description {
+    text-align: center;
+}
