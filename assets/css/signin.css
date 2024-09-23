@@ -25,3 +25,28 @@ form > .title {
 form > .description {
     text-align: center;
 }
+
+form .fields.row .field {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+
+    form {
+        --f-bg: var(--color-60);
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        padding: 20px;
+        padding-top: 100px;
+    }
+
+    form .previous {
+        top: 20px;
+        left: 20px;
+        padding: 20px;
+    }
+
+}

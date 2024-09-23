@@ -25,6 +25,7 @@ form .fields {
 
 form .fields.row {
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 form .fields .field {
@@ -49,6 +50,7 @@ form .fields .field label {
     color: var(--color-10);
     pointer-events: none;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 form .fields .field:has(input:focus, input:not(:placeholder-shown)) label {

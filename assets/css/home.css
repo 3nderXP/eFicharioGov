@@ -78,10 +78,7 @@ main section {
 }
 
 main section > .title {
-    display: flex;
-    justify-content: center;
     text-align: center;
-    align-items: center;
     gap: 20px;
     font-size: 32pt;
 }
@@ -307,4 +304,51 @@ main .contact-us .container .illustration img {
     height: 100%;
     object-fit: cover;
     border-radius: 40px;
+}
+
+@media (max-width: 900px) {
+
+    header {
+        min-height: 100vh;
+    }
+
+    header .width-grid::after {
+        /* content: none; */
+        top: 150%;
+        right: -50%;
+    }
+
+    header .right {
+        display: none;
+    }
+
+    main .benefits .wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    main .how-works .container {
+        grid-template-columns: 1fr;
+    }
+    
+    main .how-works .container .left::before {
+        transform: translate3d(-80%, -50%, 0);
+    }
+
+    main .feedbacks .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    main .contact-us .container {
+        grid-template-columns: 1fr;
+    }
+
+    main .contact-us .container form {
+        padding: 0;
+        --f-bg: var(--color-60)
+    }
+
+    main .contact-us .container form::before {
+        content: none;
+    }
+    
 }

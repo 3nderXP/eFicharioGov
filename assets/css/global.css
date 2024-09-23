@@ -152,3 +152,11 @@ footer {
 footer .copyright {
     text-align: center;
 }
+
+@media (max-width: 900px) {
+
+    #navbar .menus {
+        display: none;
+    }
+
+}
