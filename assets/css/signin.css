@@ -41,6 +41,7 @@ form .fields.row .field {
         border-radius: 0;
         padding: 20px;
         padding-top: 100px;
+        max-width: none;
     }
 
     form .previous {
